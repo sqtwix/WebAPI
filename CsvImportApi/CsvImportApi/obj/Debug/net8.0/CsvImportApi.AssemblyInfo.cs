@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CsvImportApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e2e24cd0cf10e9ac3c98b7f7fffc3d0587d4a6d")]
 [assembly: System.Reflection.AssemblyProductAttribute("CsvImportApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CsvImportApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
