@@ -87,10 +87,11 @@ namespace CsvImportApi.Controllers
 
         }
 
+
         // Метод 2. Получение списков записей с фильтрами
         [HttpGet]
         [Route("results")]
-        public async Task<IActionResult> Getdata(
+        public async Task<IActionResult> GetData(
             string? fileName,
             DateTime? startDateFrom,
             DateTime? startDateTo,
@@ -127,14 +128,24 @@ namespace CsvImportApi.Controllers
             return Ok(results);
         }
 
+
         // Метод 3. Получение спика последних 10 значений  отсортированных
         // по начальному времени запуска Date по имени заданного файла.
-               
-        
+        [HttpGet]
+        [Route("values/latest/{fileName}")]
+        public async Task<IActionResult> GetTenLatestDatas(string fileName)
+        {
+            var query = _context.Values.AsQueryable();
 
+            query = query.Where(r => r.FileName == fileName);
 
+            var values = await query
+               .OrderByDescending(v => v.Date)
+               .Take(10)
+               .ToListAsync();
 
-
+            return Ok(values);
+        }
 
 
         private double GetMedian(List<double> values) // Нахождение медианы значений

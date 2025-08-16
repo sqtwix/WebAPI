@@ -68,7 +68,7 @@
               "RelativeDocumentMoniker": "CsvImportApi\\Controllers\\CsvImportController.cs",
               "ToolTip": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\Controllers\\CsvImportController.cs",
               "RelativeToolTip": "CsvImportApi\\Controllers\\CsvImportController.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAwwIMAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAIwJYAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-15T23:30:04.484Z",
               "EditorCaption": ""
@@ -95,8 +95,7 @@
               "RelativeToolTip": "CsvImportApi\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T22:23:45.931Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-15T22:23:45.931Z"
             },
             {
               "$type": "Document",
