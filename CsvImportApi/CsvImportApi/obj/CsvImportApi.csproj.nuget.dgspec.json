@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\CsvImportApi.csproj": {}
+    "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportapi\\CsvImportApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\CsvImportApi.csproj": {
+    "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportapi\\CsvImportApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\CsvImportApi.csproj",
+        "projectUniqueName": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportapi\\CsvImportApi.csproj",
         "projectName": "CsvImportApi",
-        "projectPath": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\CsvImportApi.csproj",
+        "projectPath": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportapi\\CsvImportApi.csproj",
         "packagesPath": "C:\\Users\\ivan2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\obj\\",
+        "outputPath": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportapi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

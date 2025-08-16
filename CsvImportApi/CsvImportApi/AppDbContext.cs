@@ -13,5 +13,6 @@ namespace CsvImportApi
         }
 
         public DbSet<Result> Results { get; set; }
+        public DbSet<Values> Values { get; set; }
     }
 }
