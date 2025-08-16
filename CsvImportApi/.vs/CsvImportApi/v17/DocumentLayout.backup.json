@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7A9AFC3B-0C77-447A-AB26-86372B765602}|CsvImportApi\\CsvImportApi.csproj|c:\\users\\ivan2\\webapi\\csvimportapi\\csvimportapi\\services\\csvvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A9AFC3B-0C77-447A-AB26-86372B765602}|CsvImportApi\\CsvImportApi.csproj|solutionrelative:csvimportapi\\services\\csvvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A9AFC3B-0C77-447A-AB26-86372B765602}|CsvImportApi\\CsvImportApi.csproj|c:\\users\\ivan2\\webapi\\csvimportapi\\csvimportapi\\models\\values.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A9AFC3B-0C77-447A-AB26-86372B765602}|CsvImportApi\\CsvImportApi.csproj|solutionrelative:csvimportapi\\models\\values.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A9AFC3B-0C77-447A-AB26-86372B765602}|CsvImportApi\\CsvImportApi.csproj|c:\\users\\ivan2\\webapi\\csvimportapi\\csvimportapi\\models\\results.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A9AFC3B-0C77-447A-AB26-86372B765602}|CsvImportApi\\CsvImportApi.csproj|solutionrelative:csvimportapi\\models\\results.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A9AFC3B-0C77-447A-AB26-86372B765602}|CsvImportApi\\CsvImportApi.csproj|c:\\users\\ivan2\\webapi\\csvimportapi\\csvimportapi\\controllers\\csvimportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A9AFC3B-0C77-447A-AB26-86372B765602}|CsvImportApi\\CsvImportApi.csproj|solutionrelative:csvimportapi\\controllers\\csvimportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7A9AFC3B-0C77-447A-AB26-86372B765602}|CsvImportApi\\CsvImportApi.csproj|c:\\users\\ivan2\\webapi\\csvimportapi\\csvimportapi\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A9AFC3B-0C77-447A-AB26-86372B765602}|CsvImportApi\\CsvImportApi.csproj|solutionrelative:csvimportapi\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A9AFC3B-0C77-447A-AB26-86372B765602}|CsvImportApi\\CsvImportApi.csproj|c:\\users\\ivan2\\webapi\\csvimportapi\\csvimportapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7A9AFC3B-0C77-447A-AB26-86372B765602}|CsvImportApi\\CsvImportApi.csproj|solutionrelative:csvimportapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7A9AFC3B-0C77-447A-AB26-86372B765602}|CsvImportApi\\CsvImportApi.csproj|c:\\users\\ivan2\\webapi\\csvimportapi\\csvimportapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A9AFC3B-0C77-447A-AB26-86372B765602}|CsvImportApi\\CsvImportApi.csproj|solutionrelative:csvimportapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A9AFC3B-0C77-447A-AB26-86372B765602}|CsvImportApi\\CsvImportApi.csproj|c:\\users\\ivan2\\webapi\\csvimportapi\\csvimportapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7A9AFC3B-0C77-447A-AB26-86372B765602}|CsvImportApi\\CsvImportApi.csproj|solutionrelative:csvimportapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +42,59 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Results.cs",
+              "DocumentMoniker": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\Models\\Results.cs",
+              "RelativeDocumentMoniker": "CsvImportApi\\Models\\Results.cs",
+              "ToolTip": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\Models\\Results.cs*",
+              "RelativeToolTip": "CsvImportApi\\Models\\Results.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T13:09:14.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Values.cs",
+              "DocumentMoniker": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\Models\\Values.cs",
+              "RelativeDocumentMoniker": "CsvImportApi\\Models\\Values.cs",
+              "ToolTip": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\Models\\Values.cs",
+              "RelativeToolTip": "CsvImportApi\\Models\\Values.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T13:08:18.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CsvValidator.cs",
+              "DocumentMoniker": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\Services\\CsvValidator.cs",
+              "RelativeDocumentMoniker": "CsvImportApi\\Services\\CsvValidator.cs",
+              "ToolTip": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\Services\\CsvValidator.cs*",
+              "RelativeToolTip": "CsvImportApi\\Services\\CsvValidator.cs*",
+              "ViewState": "AgIAAAoAAAAAAAAAAADwvycAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T12:50:22.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CsvImportController.cs",
+              "DocumentMoniker": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\Controllers\\CsvImportController.cs",
+              "RelativeDocumentMoniker": "CsvImportApi\\Controllers\\CsvImportController.cs",
+              "ToolTip": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\Controllers\\CsvImportController.cs",
+              "RelativeToolTip": "CsvImportApi\\Controllers\\CsvImportController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T23:30:04.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\appsettings.json",
               "RelativeDocumentMoniker": "CsvImportApi\\appsettings.json",
@@ -34,25 +102,23 @@
               "RelativeToolTip": "CsvImportApi\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-15T22:27:14.039Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-15T22:27:14.039Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\Program.cs",
               "RelativeDocumentMoniker": "CsvImportApi\\Program.cs",
               "ToolTip": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\Program.cs",
               "RelativeToolTip": "CsvImportApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T22:23:45.931Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-15T22:23:45.931Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\AppDbContext.cs",
               "RelativeDocumentMoniker": "CsvImportApi\\AppDbContext.cs",
@@ -60,8 +126,7 @@
               "RelativeToolTip": "CsvImportApi\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T22:19:35.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-15T22:19:35.051Z"
             }
           ]
         }
