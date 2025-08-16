@@ -1,12 +1,10 @@
 ﻿using CsvHelper;
 using CsvImportApi.Models;
 using CsvImportApi.Services;
-using CsvHelper.Configuration;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel;
-using System.Globalization;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CsvImportApi.Controllers
 {
@@ -23,9 +21,10 @@ namespace CsvImportApi.Controllers
             _validator = validator;
         }
 
+        // Метод 1. Сохранение файлов из csv файла в бд
         [HttpPost]
         [Route("csv")]
-        public async Task<IActionResult> UploadCSV(IFormFile file)
+        public async Task<IActionResult> UploadCSV(IFormFile file) 
         {
             if (file == null || file.Length == 0) { return BadRequest("Файл не загружен"); }
 
@@ -87,6 +86,56 @@ namespace CsvImportApi.Controllers
             }
 
         }
+
+        // Метод 2. Получение списков записей с фильтрами
+        [HttpGet]
+        [Route("results")]
+        public async Task<IActionResult> Getdata(
+            string? fileName,
+            DateTime? startDateFrom,
+            DateTime? startDateTo,
+            double? avgValueFrom,
+            double? avgValueTo,
+            double? avgExecutionTimeFrom,
+            double? avgExecutionTimeTo)
+        {
+            var query = _context.Results.AsQueryable();
+
+            // Проверка, что фильтр есть в запросе
+            if (!string.IsNullOrWhiteSpace(fileName)) 
+                query = query.Where(r => r.FileName == fileName);
+
+            if (startDateFrom.HasValue)
+                    query = query.Where(r => r.MinDate >= startDateFrom.Value);
+           
+            if (startDateTo.HasValue)
+                query = query.Where(r => r.MinDate <= startDateTo.Value);
+
+            if (avgValueFrom.HasValue)
+                query = query.Where( r => r.AvgValue >= avgValueFrom.Value);
+
+            if (avgValueTo.HasValue)
+                query = query.Where(r => r.AvgValue <= avgValueTo.Value);
+
+            if (avgExecutionTimeFrom.HasValue)
+                query = query.Where(r => r.ExecutionTime >= avgExecutionTimeFrom.Value);
+
+            if (avgExecutionTimeTo.HasValue)
+                query = query.Where(r => r.ExecutionTime <= avgExecutionTimeTo.Value);
+
+            var results = await query.ToListAsync(); // отправка запроса
+            return Ok(results);
+        }
+
+        // Метод 3. Получение спика последних 10 значений  отсортированных
+        // по начальному времени запуска Date по имени заданного файла.
+               
+        
+
+
+
+
+
 
         private double GetMedian(List<double> values) // Нахождение медианы значений
         {

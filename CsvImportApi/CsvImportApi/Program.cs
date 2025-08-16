@@ -1,5 +1,5 @@
 using CsvImportApi;
-using CsvImportApi.Models;
+using CsvImportApi.Services;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -10,6 +10,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(connectionString));
 
+// Подключение валидатора
+builder.Services.AddScoped<CsvValidator>();
 // Add services to the container.
 
 builder.Services.AddControllers();
