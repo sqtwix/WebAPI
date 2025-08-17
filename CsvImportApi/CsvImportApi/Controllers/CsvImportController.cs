@@ -1,10 +1,11 @@
 ﻿using CsvHelper;
+using CsvHelper.Configuration;
 using CsvImportApi.Models;
 using CsvImportApi.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+
 
 namespace CsvImportApi.Controllers
 {
@@ -33,58 +34,82 @@ namespace CsvImportApi.Controllers
             try
             {
                 using (var reader = new StreamReader(file.OpenReadStream()))
-                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
                 {
-                    records = csv.GetRecords<Values>().ToList();
-                    foreach (var r in records)
+                    Delimiter = ";",
+                    PrepareHeaderForMatch = args => args.Header.Trim(),
+                    HeaderValidated = null,
+                    MissingFieldFound = null
+                }))
+                {
+                    // Читаем заголовки вручную
+                    await csv.ReadAsync();
+                    csv.ReadHeader();
+
+                    while (await csv.ReadAsync())
                     {
-                        r.FileName = file.FileName;
+                        var record = new Values
+                        {
+                            Date = csv.GetField<DateTime>("Date"),
+                            ExecutionTime = csv.GetField<double>("ExecutionTime"),
+                            Value = csv.GetField<double>("Value"),
+                            FileName = file.FileName
+                        };
+                        records.Add(record);
                     }
                 }
+              
 
-                if (!_validator.ValidateFile(records, out var error)) { return BadRequest(error); } // проверка данных файла через валидатор
+                if (!_validator.IsValideFile(records, out var error)) { return BadRequest(error); } // проверка данных файла через валидатор
 
-                // Удаление данных файла с таким же именем
-                var oldValues = await _context.Values.Where(v => v.FileName == file.FileName).ToListAsync();
-                var oldResult = await _context.Results.FirstOrDefaultAsync(r => r.FileName == file.FileName);
-
-                if (oldValues.Any())
-                    _context.Values.RemoveRange(oldValues);
-                if (oldResult != null)
-                    _context.Results.Remove(oldResult);
-
-                await _context.SaveChangesAsync();
-
-
-                // Сохраняем в Values
-                await _context.Values.AddRangeAsync(records);
-                await _context.SaveChangesAsync();
-
-                //  Интегральные результаты для Results
-                var result = new Result
+                try
                 {
-                    FileName = file.FileName,
-                    DeltaDateSeconds = (records.Max(r => r.Date) - records.Min(r => r.Date)).TotalSeconds,
-                    MinDate = records.Min(r => r.Date),
-                    ExecutionTime = records.Average(r => r.ExecutionTime),
-                    AvgValue = records.Average(r => r.Value),
-                    MedianValue = GetMedian(records.Select(r => r.Value).ToList()),
-                    MaxValue = records.Max(r => r.Value),
-                    MinValue = records.Min(r => r.Value)
-                };
 
-                // Сохранение в Results
-                await _context.Results.AddAsync(result);
-                await _context.SaveChangesAsync();
+                    // Удаление данных файла с таким же именем
+                    var oldValues = await _context.Values.Where(v => v.FileName == file.FileName).ToListAsync();
+                    var oldResult = await _context.Results.FirstOrDefaultAsync(r => r.FileName == file.FileName);
 
-                return Ok("Файл успешно обработан");
+                    if (oldValues.Any())
+                        _context.Values.RemoveRange(oldValues);
+                    if (oldResult != null)
+                        _context.Results.Remove(oldResult);
+
+                    await _context.SaveChangesAsync();
+
+                    // Сохраняем в Values
+                    await _context.Values.AddRangeAsync(records);
+                    await _context.SaveChangesAsync();
+
+                    //  Интегральные результаты для Results
+                    var result = new Result
+                    {
+                        FileName = file.FileName,
+                        DeltaDateSeconds = (records.Max(r => r.Date) - records.Min(r => r.Date)).TotalSeconds,
+                        MinDate = records.Min(r => r.Date),
+                        ExecutionTime = records.Average(r => r.ExecutionTime),
+                        AvgValue = records.Average(r => r.Value),
+                        MedianValue = GetMedian(records.Select(r => r.Value).ToList()),
+                        MaxValue = records.Max(r => r.Value),
+                        MinValue = records.Min(r => r.Value)
+                    };
+
+                    // Сохранение в Results
+                    await _context.Results.AddAsync(result);
+                    await _context.SaveChangesAsync();
+
+                    return Ok("Файл успешно обработан");
+                }
+                catch (DbUpdateException ex)
+                {
+                    return StatusCode(500, $"Database error: {ex.InnerException?.Message}");
+
+                }
             }
 
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
-
         }
 
 
@@ -92,6 +117,7 @@ namespace CsvImportApi.Controllers
         [HttpGet]
         [Route("results")]
         public async Task<IActionResult> GetData(
+            // Переменные параметы
             string? fileName,
             DateTime? startDateFrom,
             DateTime? startDateTo,
@@ -148,7 +174,8 @@ namespace CsvImportApi.Controllers
         }
 
 
-        private double GetMedian(List<double> values) // Нахождение медианы значений
+        // Нахождение медианы значений
+        private double GetMedian(List<double> values) 
         {
             var sorted = values.OrderBy(n => n).ToList(); 
             int count = sorted.Count;

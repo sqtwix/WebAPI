@@ -155,3 +155,4 @@ C:\Users\ivan2\WebAPI\CsvImportApi\CsvImportApi\bin\Debug\net8.0\tr\Microsoft.Co
 C:\Users\ivan2\WebAPI\CsvImportApi\CsvImportApi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\ivan2\WebAPI\CsvImportApi\CsvImportApi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\ivan2\WebAPI\CsvImportApi\CsvImportApi\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\ivan2\WebAPI\CsvImportApi\CsvImportApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
