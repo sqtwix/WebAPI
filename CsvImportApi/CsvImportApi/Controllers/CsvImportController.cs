@@ -15,9 +15,8 @@ namespace CsvImportApi.Controllers
     {
         private readonly AppDbContext _context; // контекст
         private readonly CsvValidator _validator; // валидатор данных
-         private readonly ILogger<CsvImportController> _logger;
 
-        public CsvImportController (AppDbContext context, CsvValidator validator) // конструктор
+        public CsvImportController(AppDbContext context, CsvValidator validator) // конструктор
         {
             _context = context;
             _validator = validator;
@@ -163,7 +162,7 @@ namespace CsvImportApi.Controllers
         }
 
 
-        // Метод 3. Получение спика последних 10 значений  отсортированных
+        // Метод 3. Получение спиcка последних 10 значений  отсортированных
         // по начальному времени запуска Date по имени заданного файла.
         [HttpGet]
         [Route("values/latest/{fileName}")]

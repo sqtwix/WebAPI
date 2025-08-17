@@ -66,8 +66,7 @@
               "RelativeToolTip": "CsvImportApi\\Migrations\\20250817121809_ChangeTimeType.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAA1wB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-17T12:18:14.982Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-17T12:18:14.982Z"
             },
             {
               "$type": "Document",
@@ -79,8 +78,7 @@
               "RelativeToolTip": "CsvImportApi\\Migrations\\20250817121219_ChangeDateToTimestamptZ.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwB0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-17T12:12:21.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-17T12:12:21.973Z"
             },
             {
               "$type": "Document",
@@ -92,8 +90,7 @@
               "RelativeToolTip": "CsvImportApi\\Migrations\\20250817120731_ChangeDateToTimestampt.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-17T12:09:33.966Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-17T12:09:33.966Z"
             },
             {
               "$type": "Document",
@@ -105,8 +102,7 @@
               "RelativeToolTip": "CsvImportApi\\Migrations\\20250817120419_NewDbcontext_WithTimeZone.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-17T12:09:32.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-17T12:09:32.985Z"
             },
             {
               "$type": "Document",
@@ -118,8 +114,7 @@
               "RelativeToolTip": "CsvImportApi\\Services\\CsvValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-17T07:56:06.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-17T07:56:06.797Z"
             },
             {
               "$type": "Document",
@@ -131,8 +126,7 @@
               "RelativeToolTip": "CsvImportApi\\Models\\Results.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-16T13:09:14.21Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-16T13:09:14.21Z"
             },
             {
               "$type": "Document",
@@ -144,8 +138,7 @@
               "RelativeToolTip": "CsvImportApi\\Models\\Values.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-16T13:08:18.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-16T13:08:18.136Z"
             },
             {
               "$type": "Document",
@@ -155,7 +148,7 @@
               "RelativeDocumentMoniker": "CsvImportApi\\Controllers\\CsvImportController.cs",
               "ToolTip": "C:\\Users\\ivan2\\WebAPI\\CsvImportApi\\CsvImportApi\\Controllers\\CsvImportController.cs",
               "RelativeToolTip": "CsvImportApi\\Controllers\\CsvImportController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAuwFQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowBEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-15T23:30:04.484Z",
               "EditorCaption": ""
@@ -194,8 +187,7 @@
               "RelativeToolTip": "CsvImportApi\\AppDbContext.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAowDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T22:19:35.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-15T22:19:35.051Z"
             }
           ]
         }
