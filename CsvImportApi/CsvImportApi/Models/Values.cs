@@ -6,7 +6,7 @@ namespace CsvImportApi.Models
     {
         public int Id { get; set; }
 
-        [Column(TypeName = "timestamp without time zone")]
+        [Column(TypeName = "timestamp with time zone")]
         public DateTime Date { get; set; }
         public double ExecutionTime { get; set; }
         public double Value { get; set; }

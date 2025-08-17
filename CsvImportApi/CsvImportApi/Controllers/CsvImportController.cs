@@ -15,6 +15,7 @@ namespace CsvImportApi.Controllers
     {
         private readonly AppDbContext _context; // контекст
         private readonly CsvValidator _validator; // валидатор данных
+         private readonly ILogger<CsvImportController> _logger;
 
         public CsvImportController (AppDbContext context, CsvValidator validator) // конструктор
         {
@@ -42,20 +43,28 @@ namespace CsvImportApi.Controllers
                     MissingFieldFound = null
                 }))
                 {
-                    // Читаем заголовки вручную
-                    await csv.ReadAsync();
-                    csv.ReadHeader();
+                    csv.Context.TypeConverterOptionsCache.GetOptions<DateTime>().Formats = new[]
+                 {
+                    "yyyy-MM-dd",
+                    "yyyy-MM-ddTHH:mm:ss",
+                    "yyyy-MM-dd HH:mm:ss",
+                    "yyyy-MM-ddTHH-mm-ss.ffffZ"
+                };
 
-                    while (await csv.ReadAsync())
+                    records = csv.GetRecords<Values>().ToList();
+
+                    // Приведение дат к UTC
+                    foreach (var record in records)
                     {
-                        var record = new Values
+                        if (record.Date.Kind == DateTimeKind.Unspecified)
                         {
-                            Date = csv.GetField<DateTime>("Date"),
-                            ExecutionTime = csv.GetField<double>("ExecutionTime"),
-                            Value = csv.GetField<double>("Value"),
-                            FileName = file.FileName
-                        };
-                        records.Add(record);
+                            record.Date = DateTime.SpecifyKind(record.Date, DateTimeKind.Utc);
+                        }
+                        else
+                        {
+                            record.Date = record.Date.ToUniversalTime();
+                        }
+                        record.FileName = file.FileName;
                     }
                 }
               
@@ -102,7 +111,6 @@ namespace CsvImportApi.Controllers
                 catch (DbUpdateException ex)
                 {
                     return StatusCode(500, $"Database error: {ex.InnerException?.Message}");
-
                 }
             }
 

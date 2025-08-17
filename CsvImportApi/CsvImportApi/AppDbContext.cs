@@ -38,6 +38,12 @@ namespace CsvImportApi
                     .HasMaxLength(255);
                 entity.Property(r => r.MinDate).IsRequired();
             });
+
+            modelBuilder.Entity<Values>(entity =>
+            {
+                entity.Property(e => e.Date)
+                    .HasColumnType("timestamp with time zone");
+            });
         }
     }
 }
