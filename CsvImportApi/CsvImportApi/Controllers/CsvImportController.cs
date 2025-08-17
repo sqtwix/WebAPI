@@ -123,7 +123,7 @@ namespace CsvImportApi.Controllers
         // Метод 2. Получение списков записей с фильтрами
         [HttpGet]
         [Route("results")]
-        public async Task<IActionResult> GetData(
+        public async Task<IActionResult> GetDataWithFilters(
             // Переменные параметы
             string? fileName,
             DateTime? startDateFrom,
